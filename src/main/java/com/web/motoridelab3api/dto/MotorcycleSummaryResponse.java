@@ -12,5 +12,4 @@ public record MotorcycleSummaryResponse(
         String imageUrl,
         BigDecimal price,
         String categorySlug,
-        String categoryName) {
-}
+        String categoryName) {}

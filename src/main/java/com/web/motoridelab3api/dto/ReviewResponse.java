@@ -6,5 +6,6 @@ public record ReviewResponse(
         Long id,
         Integer rating,
         String text,
-        LocalDateTime createdAt) {
-}
+        LocalDateTime createdAt,
+        Long authorId,
+        String authorName) {}

@@ -16,5 +16,6 @@ public record MotorcycleResponse(
         String categoryName,
         String shortDescription,
         String description,
-        List<String> technologies) {
-}
+        List<String> technologies,
+        Long categoryId,
+        List<Long> technologyIds) {}
