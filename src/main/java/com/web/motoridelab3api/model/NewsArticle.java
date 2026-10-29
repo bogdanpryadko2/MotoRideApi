@@ -6,11 +6,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.Clock;
 import java.time.LocalDateTime;
 
 @Entity
@@ -34,9 +36,9 @@ public class NewsArticle {
     @Column(name = "image_url", length = 500)
     private String imageUrl;
 
-    @Column(name = "published_at", nullable = false, updatable = false)
-    private LocalDateTime publishedAt = LocalDateTime.now();
+    @Column(name = "published_at", nullable = false)
+    private LocalDateTime publishedAt = LocalDateTime.now(Clock.systemUTC());
 
     @Column(name = "created_at", nullable = false, updatable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAt = LocalDateTime.now(Clock.systemUTC());
 }
